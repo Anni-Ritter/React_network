@@ -4,8 +4,12 @@
     padding: 20px;
 }
 
-.item a {
+.item {
     color: brown;
     text-decoration: none;
 }
 
+.active{
+    color: darkorange;
+    text-decoration: none;
+}

@@ -1,8 +1,11 @@
-.nav{
-    grid-area: nav;
-    background-color:bisque;
-  }
-
-.item{
-  color:brown;
+.nav {
+    grid-area: n;
+    background-color: bisque;
+    padding: 20px;
 }
+
+.item a {
+    color: brown;
+    text-decoration: none;
+}
+

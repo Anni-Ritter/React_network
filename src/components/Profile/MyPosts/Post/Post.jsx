@@ -1,14 +1,13 @@
 import React from "react";
-import style from './Post.module.css';
 
-const Post = (probs) =>{
-    return(
-    <div className={style.content}>
+const Post = (probs) => {
+    return (
         <div>
-            <div>{probs.text}, {probs.time}</div>
-            <span>like</span>
+            <div>
+                <div>{probs.text}, {probs.time}</div>
+                <span>like</span>
+            </div>
         </div>
-    </div>
     )
 }
 export default Post;

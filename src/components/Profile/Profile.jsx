@@ -1,16 +1,11 @@
 import React from "react";
 import MyPost from "./MyPosts/MyPost";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
         <div>
-            <div>
-                <img src="https://adrenaline.com.br/uploads/chamadas/genshin_impact1.jpg" width="700px"
-                     height="300px"></img>
-            </div>
-            <div>
-                avatar+description
-            </div>
+            <ProfileInfo/>
             <MyPost/>
         </div>
     )

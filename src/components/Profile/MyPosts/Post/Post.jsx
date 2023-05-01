@@ -4,8 +4,7 @@ const Post = (probs) => {
     return (
         <div>
             <div>
-                <div>{probs.text}, {probs.time}</div>
-                <span>like</span>
+                <div>{probs.text}, {probs.time} {probs.likeCount}</div>
             </div>
         </div>
     )

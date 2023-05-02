@@ -1,4 +1,7 @@
-.content {
-    grid-area: content;
-    background-color: MistyRose;
+.post{
+    margin: 5px;
+}
+
+.newPost{
+    padding: 5px;
 }

@@ -1,12 +1,10 @@
 import React from "react";
-import style from './Post.module.css';
 
 const Post = (probs) => {
     return (
-        <div className={style.content}>
+        <div>
             <div>
-                <div>{probs.text}, {probs.time}</div>
-                <span>like</span>
+                <div>{probs.text}, {probs.time} {probs.likeCount}</div>
             </div>
         </div>
     )

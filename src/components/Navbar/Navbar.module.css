@@ -1,8 +1,8 @@
-.nav{
-    grid-area: nav;
-    background-color:bisque;
-  }
+.nav {
+    grid-area: n;
+    background-color: bisque;
+}
 
-.item{
-  color:brown;
+.item {
+    color: brown;
 }

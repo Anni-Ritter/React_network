@@ -5,7 +5,7 @@ const Friends = (props) =>{
         <div>
             {props.state.friendData.map(p => (
                 <div className={s.item}>
-                    <span className={s.avatar}><img src={p.avatar}></img></span>
+                    <span className={s.avatar}><img src={p.avatar} alt={"error"}></img></span>
                     <span>{p.name}</span>
                 </div>
             ))}

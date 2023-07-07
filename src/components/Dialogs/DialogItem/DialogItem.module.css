@@ -1,0 +1,12 @@
+.dialogsItem{
+    padding: 5px;
+}
+
+.dialogsItem .active{
+    color: palevioletred;
+}
+
+.userItem{
+    text-decoration: none;
+    color: brown;
+}

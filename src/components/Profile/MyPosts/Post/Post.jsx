@@ -1,10 +1,10 @@
 import React from "react";
 
-const Post = (probs) => {
+const Post = (props) => {
     return (
         <div>
             <div>
-                <div>{probs.text}, {probs.time} {probs.likeCount}</div>
+                <div>{props.text}, {props.time} {props.likeCount}</div>
             </div>
         </div>
     )

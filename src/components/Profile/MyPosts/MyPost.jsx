@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 import s from './MyPost.module.css'
 
 const MyPost = (props) => {
-
+    debugger;
     let postsElement = props.postData.map(p => <Post text={p.text} time={p.time} likeCount={p.like}/>)
     return (
         <div>

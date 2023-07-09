@@ -1,10 +1,12 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 3fr 10fr;
+    grid-template-rows: auto auto;
 }
 
 .dialogsItem{
     padding: 5px;
+    background: darkseagreen;
 }
 
 .dialogsItem .active{
@@ -13,9 +15,32 @@
 
 .message{
     padding: 10px;
+    background: antiquewhite;
 }
 
 .userItem{
     text-decoration: none;
     color: brown;
+}
+
+.addMessage{
+    padding: 5px;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+
+.addMessage textarea{
+    height: 40px;
+    width: 70%;
+}
+.addMessage button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+.addMessage img{
+    width: 30px;
+    height: 30px;
 }

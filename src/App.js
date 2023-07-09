@@ -10,17 +10,18 @@ import News from "./components/News/News";
 import Setting from "./components/Setting/Setting";
 import Friends from "./components/Friends/Friends";
 
+
 const App = (props) =>
 {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar state={props.state.sideInfo}/>
                 <div className='app-content'>
                     <Routes>
-                        <Route path={'/dialogs'} element={<Dialogs state={props.state.dialogsPage}/>}/>
-                        <Route path={'/profile'} element={<Profile state={props.state.profilePage}/>}/>
+                        <Route path={'/dialogs'} element={<Dialogs state={props.state.dialogsPage} addMessage={props.addMessage}/>}/>
+                        <Route path={'/profile'} element={<Profile state={props.state.profilePage} addPost={props.addPost}/>}/>
                         <Route path={'/music'} element={<Music/>}/>
                         <Route path={'/news'} element={<News/>}/>
                         <Route path={'/setting'} element={<Setting/>}/>

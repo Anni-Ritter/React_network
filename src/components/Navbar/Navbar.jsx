@@ -2,14 +2,12 @@ import React from "react";
 import style from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className={style.nav}>
             <div>
                 <NavLink to={'/profile'} className={navData =>
-                navData.isActive ? style.active : style.item}>
-                    Profile
-                </NavLink>
+                navData.isActive ? style.active : style.item}>Profile</NavLink>
             </div>
             <div>
                 <NavLink to={'/dialogs'} className={navData =>
@@ -30,6 +28,14 @@ const Navbar = () => {
             <div>
                 <NavLink to={'/friends'} className={navData =>
                     navData.isActive ? style.active : style.item}>Friends</NavLink>
+            </div>
+            <div className={style.recFriend}>
+                {props.state.recommendationFriend.map(p =>(
+                    <div className={style.avatarWrapper}>
+                        <span><img src={p.avatar} alt={'Error'} className={style.avatar}></img></span>
+                        <div className={style.nickname}>{p.name}</div>
+                    </div>
+                ))}
             </div>
         </nav>
     )

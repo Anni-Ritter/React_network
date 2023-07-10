@@ -20,8 +20,8 @@ const App = (props) =>
                 <Navbar state={props.state.sideInfo}/>
                 <div className='app-content'>
                     <Routes>
-                        <Route path={'/dialogs'} element={<Dialogs state={props.state.dialogsPage} addMessage={props.addMessage}/>}/>
-                        <Route path={'/profile'} element={<Profile state={props.state.profilePage} addPost={props.addPost}/>}/>
+                        <Route path={'/dialogs'} element={<Dialogs state={props.state.dialogsPage} addMessage={props.addMessage} updateNewMessage={props.updateNewMessage}/>}/>
+                        <Route path={'/profile'} element={<Profile state={props.state.profilePage} addPost={props.addPost} updateNewPost={props.updateNewPost}/>}/>
                         <Route path={'/music'} element={<Music/>}/>
                         <Route path={'/news'} element={<News/>}/>
                         <Route path={'/setting'} element={<Setting/>}/>

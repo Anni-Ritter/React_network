@@ -13,12 +13,14 @@ let state = {
             {id: 2, message: "What's up?"},
             {id: 3, message: "Come on, do it"}
         ],
+        newMessageText: ''
     },
     profilePage:{
         postData: [
             {id: 1, text: "Hi! What's u name?", time: "21:09", like: "0"},
             {id: 2, text: "Hi! It's my first post?", time: "21:10", like: "69"}
-        ]
+        ],
+        newPostText: ''
     },
     friendPage:{
         friendData:[
@@ -40,24 +42,38 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) =>{
+export let addPost = () =>{
     let newPost = {
         id: 5,
-        text: postMessage,
+        text: state.profilePage.newPostText,
         time: new Date().toTimeString().split(" ")[0],
         like: 0
     };
     state.profilePage.postData.push(newPost);
+    state.profilePage.newPostText = '';
     rerenderEntireTree(state);
 }
 
-export let addMessage = (textMessage) =>{
-    let newMessage ={
+export let updateNewPost = (postText) =>{
+    state.profilePage.newPostText = postText;
+    rerenderEntireTree(state);
+}
+
+export let addMessage = () =>{
+    let newMessage = {
         id: 4,
-        message: textMessage
+        message: state.dialogsPage.newMessageText
     };
     state.dialogsPage.messagesData.push(newMessage);
-    rerenderEntireTree(state)
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
 }
+
+export let updateNewMessage = (newText) =>{
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireTree(state);
+}
+
+
 
 export default state;
